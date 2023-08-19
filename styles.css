@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap');
+
+:root {
+  --blue: hsl(223, 87%, 63%);
+  --white: hsl(0, 0%, 100%);
+
+  --pale-blue: hsl(223, 100%, 88%);
+  --light-red: hsl(354, 100%, 66%);
+  --gray: hsl(0, 0%, 59%);
+  --very-dark-blue: hsl(209, 33%, 12%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Libre Franklin', 'Helvetica', sans-serif;
+  font-size: 10px;
+  font-weight: 300;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 80px 28px 36px;
+  margin: 0 auto;
+  max-width: 700px;
+  text-align: center;
+}
+
+.container__newsletter {
+  display: flex;
+  flex-direction: column;
+  padding: 0 8px;
+}
+
+.container__logo {
+  margin: 0 auto 32px;
+  max-width: 56px;
+}
+
+.container__heading {
+  margin-bottom: 15px;
+  font-size: 2.2rem;
+  font-weight: 300;
+  line-height: 3.2rem;
+  color: var(--gray);
+}
+
+.container__heading span {
+  font-weight: 700;
+  color: var(--very-dark-blue);
+}
+
+.container__info {
+  margin-bottom: 32px;
+  font-size: 1.2rem;
+  color: var(--very-dark-blue);
+}
+
+.form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+
+  margin-bottom: 72px;
+  width: 100%;
+  max-width: 300px;
+}
+
+.form__email {
+  flex-grow: 1;
+  padding: 10px 32px;
+  border: 1px solid var(--pale-blue);
+  border-radius: 28px;
+
+  font-size: 1.2rem;
+  line-height: 2rem;
+  color: var(--very-dark-blue);
+
+  box-shadow: 0 0 7px 3px rgba(0, 0, 0, 0.00);
+  transition: border-color .2s;
+}
+
+.form__email::placeholder {
+  color: var(--pale-blue);
+}
+
+.form__email:focus-visible {
+  border-color: var(--blue);
+}
+
+.form__email--error {
+  border-color: var(--light-red);
+}
+
+.form__email--error + .form__message {
+  display: block;
+}
+
+.form__email--error ~ .form__notify {
+  margin-top: 20px;
+}
+
+.form__message {
+  display: none;
+  font-style: italic;
+  letter-spacing: 0.0125rem;
+  line-height: 2rem;
+  color: var(--light-red);
+}
+
+.form__notify {
+  flex-grow: 1;
+  padding: 12px 0;
+  border: none;
+  border-radius: 28px;
+  margin-top: 10px;
+
+  font-size: 1.2rem;
+  font-weight: 600;
+  line-height: 1.6rem;
+  color: var(--white);
+  background-color: var(--blue);
+
+  box-shadow: 0 5px 10px 2px rgba(76, 123, 243, 0.23);
+  cursor: pointer;
+  transition: opacity .2s;
+}
+
+.form__notify:hover {
+  opacity: .9;
+}
+
+.container__dashboard-img {
+  margin-bottom: 120px;
+}
+
+.container__socials {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 27px;
+}
+
+.container__socials a {
+  border: 1px solid var(--pale-blue);
+  border-radius: 50%;
+
+  width: 32px;
+  height: 32px;
+
+  font-size: 1.5rem;
+  text-align: center;
+  line-height: 3rem;
+  color: var(--blue);
+  text-decoration: none;
+  transition: border-color .2s, color .2s, background-color .2s;
+}
+
+.container__socials a:hover {
+  border-color: var(--blue);
+  color: var(--white);
+  background-color: var(--blue);
+}
+
+.container__footer {
+  color: var(--gray);
+}
+
+@media (min-width: 768px) {
+  .container__heading {
+    margin-bottom: 16px;
+    font-size: 4.8rem;
+    line-height: 6rem;
+  }
+
+  .container__info {
+    margin-bottom: 40px;
+    font-size: 2rem;
+    color: var(--very-dark-blue);
+  }
+
+  .form {
+    flex-direction: row;
+    gap: 16px;
+    margin-bottom: 94px;
+    max-width: 640px;
+  }
+
+  .form__email {
+    padding: 18px 32px;
+
+    font-size: 1.6rem;
+    line-height: 2rem;
+  }
+
+  .form__message {
+    position: absolute;
+    bottom: -26px;
+    left: 30px;
+    font-size: 1.2rem;
+    letter-spacing: 0.015rem;
+  }
+
+  .form__notify,
+  .form__email--error ~ .form__notify {
+    margin-top: 0;
+  }
+
+  .form__notify {
+    padding: 18px 0;
+    max-width: 200px;
+    font-size: 1.6rem;
+    line-height: 1;
+  }
+
+  .container__dashboard-img {
+    margin-bottom: 72px;
+  }
+
+  .container__socials {
+    margin-bottom: 25px;
+  }
+
+  .container__footer {
+    font-size: 1.2rem;
+  }
+}
