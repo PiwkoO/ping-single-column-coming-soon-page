@@ -33,8 +33,8 @@ Users should be able to:
 
 ### Links
 
-- [Solution on frontendmentor.io]()
-- [Live preview]()
+- [Solution on frontendmentor.io](https://www.frontendmentor.io/solutions/ping-coming-soon-page-solution-9af6tTSCs0)
+- [Live preview](https://piwkoo.github.io/ping-single-column-coming-soon-page/)
 
 ## My process
 
